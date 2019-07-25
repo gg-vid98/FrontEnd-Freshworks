@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>REST Countries API</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+ 
+ <style> type= .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+<body>
+    <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    
+    <h1>Welcome to REST Countries</h1>
+	<h2 style="color:white;">Hover over to view details..</h2>
+	
+   <div id="main-container"> 
+		<div class="flip-card">
+		<div class="flip-card-inner">
+			
+				
+      
+					
+	  <div class="flip-card-front">
+	  <div id="flag-container"> 
+        <img src="" alt="">
+		</div>
+		</div>
+		
+      
+
+	   <div class="flip-card-back">
+	        <div id="info-container">
+        <select id="countries"></select>
+        <p font-c>Capital: <span id="capital"></span></p>
+        <p>Dialing Code: <span id="dialing-code"></span></p>
+        <p>Population: <span id="population"></span></p>
+        <p>Currencies: <span id="currencies"></span></p>
+        <p>Region: <span id="region"></span></p>
+        <p>Subregion: <span id="subregion"></span></p>
+		</div>
+      </div>  
+    </div> 
+	</div>
+	</div>
+	</div>
+    <script src="main.js"></script>
+  </body>
+</html>
